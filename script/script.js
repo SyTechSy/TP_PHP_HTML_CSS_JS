@@ -13,6 +13,34 @@ if (closeFormulaireApprenant){
     })
 }
 
+
+// ======================= MATRICULE ====================
+
+var matriculeId = document.getElementById('text_matricule').value=create_mat(4);
+function create_mat(str_length) {
+
+    var random_str = "";
+    var caract = "ABCDEFGHIJKLMNOPQRSTUVWXZQ0123456789abcdefghijklmnopqrstuvwxyz";
+    for(var i, i = 0; i< str_length ; i++) {
+        random_str += caract.charAt(Math.floor(Math.random()* caract.length));
+    }
+    return random_str;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ======================= LA PROTECTION DE MON CODE ==============================
 
 function blockAccess(event) {

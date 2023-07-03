@@ -180,7 +180,7 @@
         <!-- pour quitter les formulaires de Apprenant   -->
         <div class="quitte_ajouteApprenant" id="close_formulaireApprenant">
             <div>
-                <a href="accueil.php"><i class="ri-add-circle-fill"></i></a>
+                <a href="accueil.php"><i class="ri-close-line"></i></a>
             </div>
         </div>
 

@@ -19,6 +19,10 @@ if(isset($_POST['submit'])) {
     $img_des = "img/".$img_name;
     move_uploaded_file($img_loc, 'img/' .$img_name);
 
+    // apple matricule 
+
+    $matriculeid = $_POST['promo'].$_POST['matriculeid'];
+
 
     mysqli_query($net, "INSERT INTO `admin_tableau`(`matriculeid`, `lname`, `fname`, `age`, `birth`, `email`, `number`, `photo`, `certifica`, `promo`) VALUES ('$matriculeid','$lname','$fname','$age','$birth','$email','$number','$img_des','$certifica','$promo')");
 }
@@ -30,21 +34,21 @@ if(isset($_POST['submit'])) {
 <?php
 // require 'net.php';
 
-$query = "select matriculeid from admin_tableau order by matriculeid desc";
-$result = mysqli_query($net,$query);
-$row = mysqli_fetch_array($result);
-$lastid = $row['matriculeid'];
+// $query = "select matriculeid from admin_tableau order by matriculeid desc";
+// $result = mysqli_query($net,$query);
+// $row = mysqli_fetch_array($result);
+// $lastid = $row['matriculeid'];
 
-if(empty($lastid))
-{
-    $numb = "SY_0001";
-}
-else 
-{
-    $idd = str_replace("SY_","",$lastid);
-    $id = str_pad($idd + 1, 4,0, STR_PAD_LEFT);
-    $numb = 'SY_' .$id;
-}
+// if(empty($lastid))
+// {
+//     $numb = "SY_0001";
+// }
+// else 
+// {
+//     $idd = str_replace("SY_","",$lastid);
+//     $id = str_pad($idd + 1, 4,0, STR_PAD_LEFT);
+//     $numb = 'SY_' .$id;
+// }
 
 ?>
 
@@ -207,7 +211,7 @@ else
             <!-- Côte de promotion  -->
             <div class="erro_text">
                 <label for="promo">Promotion </label>
-                <input style="margin-top: 5px;" id="text_promo" type="text" required  name="promo" placeholder="exemple : P2023">
+                <input style="margin-top: 5px;" id="text_promo" type="text" required  name="promo" placeholder="exemple : P1">
                 <span style="display: block; margin-bottom: 5px;" id="error_text_promo"></span>
             </div>
             
@@ -224,7 +228,7 @@ else
         <!-- pour quitter les formulaires de Apprenant   -->
         <div class="quitte_ajouteApprenant" id="close_formulaireApprenant">
             <div>
-                <i class="ri-add-circle-fill"></i>
+                <i class="ri-close-line"></i>
             </div>
         </div>
 
