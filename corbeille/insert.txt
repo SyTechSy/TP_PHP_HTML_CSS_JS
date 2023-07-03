@@ -1,0 +1,26 @@
+<?php
+include 'net.php';
+
+if(isset($_POST['submit'])) {
+    $matriculeid = $_POST['matriculeid'];
+    $lname = $_POST['lname'];
+    $fname = $_POST['fname'];
+    $age = $_POST['age'];
+    $birth = $_POST['birth'];
+    $email = $_POST['email'];
+    $number = $_POST['number'];
+    $certifica = $_POST['certifica'];
+    $promo = $_POST['promo'];
+
+    $photo = $_FILES['photo'];
+    print_r($_FILES['photo']);
+    $img_loc = $_FILES['photo']['tmp_name'];
+    $img_name = $_FILES['photo']['name'];
+    $img_des = "img/".$img_name;
+    move_uploaded_file($img_loc, 'img/' .$img_name);
+
+
+    mysqli_query($net, "INSERT INTO `admin_tableau`(`matriculeid`, `lname`, `fname`, `age`, `birth`, `email`, `number`, `photo`, `certifica`, `promo`) VALUES ('$matriculeid','$lname','$fname','$age','$birth','$email','$number','$img_des','$certifica','$promo')");
+}
+
+?>

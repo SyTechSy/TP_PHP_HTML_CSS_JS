@@ -1,0 +1,299 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'); */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ECECEC;
+    position: relative;
+}
+
+nav {
+    height: 80px;
+    background: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+.logo {
+    color: #fff;
+    padding-left: 50px;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 5px;
+}
+
+nav ul li a {
+    color: #ececece7;
+    padding: 6px 20px;
+    text-decoration: none;
+    line-height: 1px;
+    font-size: 18px;
+    transition: all 1s ease;
+}
+
+nav ul li a:hover{
+    border-bottom: 1px solid #fff;
+    transition: all .5s ease;
+
+}
+
+
+.btn_mod_sup a {
+    text-decoration: none;
+    margin: 5px;
+}
+.btn_mod_sup button {
+    border: none;
+    background: transparent;
+}
+
+.btn_mod_sup .mod {
+    font-size:20px!important; 
+    cursor:pointer; 
+    color: blue;
+}
+
+.btn_mod_sup .sup {
+    font-size:20px!important; 
+    cursor:pointer; 
+    color: red;
+}
+
+
+/* =================== syle de nom d'admin ================ */
+
+.nom_admin {
+    margin: 30px;
+}
+
+.nom_admin h2 {
+    text-align: center;
+    margin-top: 76px;
+}
+
+thead th {
+    color: #222;
+    border-bottom: 1px solid #18366124;
+}
+
+table, th, td {
+    padding: 0.7rem;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+
+/* .table_body {
+    width: 95%;
+    max-height: calc(89% - .8rem);
+    background-color: rgb(255, 255, 255);
+    margin: .1rem auto;
+    border-radius: .6rem;
+} */
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+thead th {
+    background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #423f3847;
+}
+
+/* tbody tr:hover {
+    background-color: #183661bb;
+    color: #fff;
+} */
+
+
+.ajoute_plus .ajouteUser {
+    margin: 30px 30px 10px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.ajoute_plus .ajouteUser i {
+    font-size: 50px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* ================= CÔTE DE FORMULAIRE ================ */
+
+/* .formulaire_container {
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.formulaire {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    top: -30px;
+    width: 100%;
+    background-color: #000000c9;
+    /* background-color: #d3ccccc9; */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 20;
+    display: none;
+}
+
+form {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    margin: 50px auto;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background-color: #fff;
+    /* margin-top: -40px; */
+    border-radius: 10px;
+    z-index: 99999999999999999999999;
+}
+
+form div input {
+    width: 100%;
+    height: 8vh;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    padding: 0 30px;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+input:focus {
+    border: 2px solid #f2796e;
+}
+
+form div i {
+    position: absolute;
+    padding: 13px;
+}
+
+/* .non_succes,
+.avec_succes {
+    right: 0;
+    top: 25px;
+    opacity: 0;
+}
+
+.non_succes,
+.error {
+    color: red;
+} */
+
+.erro_text.success input {
+    border: 2px solid rgb(26, 167, 26);
+}
+
+.erro_text.errorr input {
+    border: 2px solid rgb(228, 29, 22);
+}
+
+.erro_text small {
+    margin: 13px;
+    visibility: hidden;
+    color: rgb(228, 29, 22)!important;
+}
+
+button.inscrire_btn {
+    margin-top: 15px;
+    width: 100%;
+    height: 45px;
+    background-color: blue;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+button.inscrire_btn:hover {
+    opacity: 0.8;
+}
+
+.quitte_ajouteApprenant a{
+    text-decoration: none;
+}
+
+.quitte_ajouteApprenant i {
+    font-size: 50px;
+    position: absolute;
+    color: #fff;
+    right: 23%;
+    top: 45px;
+    cursor: pointer;
+}
+
+.show_formulaire_apprenant {
+    display: block;
+    animation: anime 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) alternate;
+}
+
+@keyframes anime {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+input#file-upload-button {
+    background: red!important;
+}
+
+#image_change {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.img_dinamic {
+    border-radius: 50%!important;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.486);
+}

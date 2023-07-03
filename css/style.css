@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ECECEC;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    text-align: center;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.bars {
+    height: 2px;
+    background-color: #22222248;
+    margin-bottom: 10px;
+}
+
+
+.form label{
+    font-size: 18px;
+}
+
+
+.form input{
+    width: 493px;
+    height: 45px!important;
+    background: #D9D9D9;
+    border-radius: 7px;
+    padding-left: 20px;
+    border: none;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #013979;
+    transition: all .5s ease;
+}
+
+.info-ins {
+    text-align: center;
+}
+.info-ins a{
+    text-decoration: none;
+    color: red;
+    padding-left: 5px;
+}
+
+.para-oublie {
+    margin-top: -10px;
+    color: #035ADE;
+    text-align: center;
+    cursor: pointer;
+}
+
+.info-ins a:hover {
+    text-decoration: underline;
+}
+
+.btn_inscrire{
+    background-color: #035ADE;
+    color: #fff;
+    padding: 15px 195px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.btnnnn {
+    padding: 15px 209px!important;
+}
+
+.submit{
+    text-align: center;
+    margin: 20px 0;
+} 
+
+.form-container form .error-msg{
+    margin: 10px 0;
+    display: block;
+    background-color: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+
+@media screen and (max-width: 760px) {
+    .name h1{
+        font-size: 30px;
+    }
+
+    .form input {
+        width: 350px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .submit a {
+        padding: 7px 140px;
+    }
+}
+/*============ media de 400px =====================*/
+
+@media screen and (max-width: 400px){
+    .name h1{
+        font-size: 25px;
+    }
+
+    .form input {
+        width: 250px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .submit a {
+        padding: 7px 50px;
+        font-size: 10px;
+    }
+
+    .info-ins {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .name h1{
+        font-size: 20px;
+    }
+
+    .form input {
+        width: 150px;
+        height: 35px;
+        font-size: 13px;
+    }
+
+    .submit a {
+        padding: 5px 15px;
+    }
+
+    .form label {
+        font-size: 10px;
+    }
+
+    .info-ins p{
+        font-size: 7px;
+    }
+}
